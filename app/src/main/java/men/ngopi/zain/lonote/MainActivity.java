@@ -8,21 +8,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
 
+import men.ngopi.zain.lonote.adapter.LabelAdapter;
 import men.ngopi.zain.lonote.databaseHelper.LabelHelper;
+import men.ngopi.zain.lonote.model.Label;
 
 public class MainActivity extends AppCompatActivity {
 

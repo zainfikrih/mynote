@@ -4,9 +4,9 @@ import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 
 import men.ngopi.zain.lonote.databaseHelper.NoteHelper;
+import men.ngopi.zain.lonote.model.Note;
 
 public class NoteActivity extends AppCompatActivity {
 

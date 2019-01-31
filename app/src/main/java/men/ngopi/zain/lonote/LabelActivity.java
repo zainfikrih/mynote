@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import men.ngopi.zain.lonote.databaseHelper.LabelHelper;
+import men.ngopi.zain.lonote.model.Label;
 
 
 public class LabelActivity extends AppCompatActivity {

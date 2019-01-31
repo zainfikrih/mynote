@@ -1,4 +1,4 @@
-package men.ngopi.zain.lonote;
+package men.ngopi.zain.lonote.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,8 +13,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import men.ngopi.zain.lonote.databaseHelper.LabelHelper;
+import men.ngopi.zain.lonote.NoteActivity;
+import men.ngopi.zain.lonote.NoteListActivity;
+import men.ngopi.zain.lonote.R;
 import men.ngopi.zain.lonote.databaseHelper.NoteHelper;
+import men.ngopi.zain.lonote.model.Note;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.CustomViewHolder> {
 

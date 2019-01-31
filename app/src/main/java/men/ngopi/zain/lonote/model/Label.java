@@ -1,4 +1,4 @@
-package men.ngopi.zain.lonote;
+package men.ngopi.zain.lonote.model;
 
 public class Label {
     private int id;

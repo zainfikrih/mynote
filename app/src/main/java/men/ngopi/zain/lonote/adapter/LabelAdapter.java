@@ -1,10 +1,8 @@
-package men.ngopi.zain.lonote;
+package men.ngopi.zain.lonote.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
@@ -15,11 +13,14 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import men.ngopi.zain.lonote.MainActivity;
+import men.ngopi.zain.lonote.NoteListActivity;
+import men.ngopi.zain.lonote.R;
 import men.ngopi.zain.lonote.databaseHelper.LabelHelper;
+import men.ngopi.zain.lonote.model.Label;
 
 public class LabelAdapter extends RecyclerView.Adapter<LabelAdapter.CustomViewHolder> {
 

@@ -13,13 +13,13 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import men.ngopi.zain.lonote.adapter.NoteAdapter;
 import men.ngopi.zain.lonote.databaseHelper.NoteHelper;
+import men.ngopi.zain.lonote.model.Note;
 
 public class NoteListActivity extends AppCompatActivity {
 

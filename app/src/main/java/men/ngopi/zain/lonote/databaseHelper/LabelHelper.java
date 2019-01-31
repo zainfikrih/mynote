@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import men.ngopi.zain.lonote.Label;
+import men.ngopi.zain.lonote.model.Label;
 
 import static android.provider.BaseColumns._ID;
 import static men.ngopi.zain.lonote.databaseHelper.DatabaseContract.LabelColumns.JUDUL;

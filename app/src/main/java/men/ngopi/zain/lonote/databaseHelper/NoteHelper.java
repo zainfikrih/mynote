@@ -5,11 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import men.ngopi.zain.lonote.Note;
+import men.ngopi.zain.lonote.model.Note;
 
 import static android.provider.BaseColumns._ID;
 import static men.ngopi.zain.lonote.databaseHelper.DatabaseContract.NoteColumns.ISI_NOTE;
