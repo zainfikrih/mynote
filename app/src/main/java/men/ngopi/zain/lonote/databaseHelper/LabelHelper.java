@@ -78,7 +78,8 @@ public class LabelHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(JUDUL, label.getLabel());
         contentValues.put(KETERANGAN, label.getKeterangan());
-        return database.insert(TABLE_LABEL, null, contentValues);
+        long result = database.insert(TABLE_LABEL, null, contentValues);
+        return result;
     }
 
     public int update(Label label){
@@ -90,5 +91,17 @@ public class LabelHelper {
 
     public int delete(Label label){
         return database.delete(TABLE_LABEL, _ID + "= '" + label.getId() + "'", null);
+    }
+
+    public long insertFast(Label label){
+//        database.beginTransaction();
+        database.beginTransactionNonExclusive();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(JUDUL, label.getLabel());
+        contentValues.put(KETERANGAN, label.getKeterangan());
+        long result = database.insert(TABLE_LABEL, null, contentValues);
+        database.setTransactionSuccessful();
+        database.endTransaction();
+        return result;
     }
 }
