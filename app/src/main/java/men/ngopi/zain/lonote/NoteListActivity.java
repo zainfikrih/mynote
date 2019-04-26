@@ -33,6 +33,7 @@ public class NoteListActivity extends AppCompatActivity {
     static private NoteListActivity noteListActivity;
     private NoteHelper noteHelper;
     private SearchView searchView;
+    private boolean isBack = false;
 
     static public NoteListActivity getNoteListActivity(){
         return noteListActivity;
@@ -69,6 +70,7 @@ public class NoteListActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String s) {
                 search(s);
+                isBack = true;
                 return false;
             }
         });
@@ -95,6 +97,18 @@ public class NoteListActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(!isBack){
+            super.onBackPressed();
+            return;
+        }
+
+        searchView.clearFocus();
+        searchView.setQuery("", false);
+        isBack = false;
     }
 
     @Override

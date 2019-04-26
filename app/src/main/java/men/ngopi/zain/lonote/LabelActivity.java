@@ -29,7 +29,7 @@ public class LabelActivity extends AppCompatActivity {
         judul = findViewById(R.id.judulLabel);
         keterangan = findViewById(R.id.keteranganLabel);
         btnLabel = findViewById(R.id.btnLabel);
-        btnLabel2 = findViewById(R.id.btnLabel2);
+//        btnLabel2 = findViewById(R.id.btnLabel2);
 
         labelHelper = new LabelHelper(this);
 
@@ -53,20 +53,20 @@ public class LabelActivity extends AppCompatActivity {
             }
         });
 
-        btnLabel2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!judul.getText().toString().equals("") && !keterangan.getText().toString().equals("")){
-                    long startTime = System.nanoTime();
-                    insertDataFast(); //Dengan transaction
-                    long endTime = System.nanoTime();
-                    Log.i("Time Insert Label = ", String.valueOf((endTime-startTime)/1000000));
-                    Toast.makeText(LabelActivity.this, "Time : " + String.valueOf((endTime-startTime)/1000000) + " ms", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(LabelActivity.this, "Isi Dulu Boy..", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+//        btnLabel2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(!judul.getText().toString().equals("") && !keterangan.getText().toString().equals("")){
+//                    long startTime = System.nanoTime();
+//                    insertDataFast(); //Dengan transaction
+//                    long endTime = System.nanoTime();
+//                    Log.i("Time Insert Label = ", String.valueOf((endTime-startTime)/1000000));
+//                    Toast.makeText(LabelActivity.this, "Time : " + String.valueOf((endTime-startTime)/1000000) + " ms", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(LabelActivity.this, "Isi Dulu Boy..", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
     }
 
     @Override

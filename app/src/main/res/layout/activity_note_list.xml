@@ -28,7 +28,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:iconifiedByDefault="false"
-            android:queryHint="Search..."
+            android:queryHint="Search Note..."
             android:touchscreenBlocksFocus="true"></SearchView>
 
         <android.support.v7.widget.RecyclerView

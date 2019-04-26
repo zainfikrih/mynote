@@ -69,7 +69,7 @@ public class LabelHelper {
                 cursor.moveToNext();
             } while (!cursor.isAfterLast());
         } else {
-            Toast.makeText(context, judul, Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, judul + " not available", Toast.LENGTH_SHORT).show();
         }
         return arrayList;
     }

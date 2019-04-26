@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="Lonote"
+                android:text="@string/app_name"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:letterSpacing="0.1"
@@ -34,8 +34,8 @@
                 app:mt_textCursorTint="@color/colorBlue"
                 app:mt_highlightedTextColor="@color/colorBlue"
                 style="@style/MaterialSearchBarLight"
-                app:mt_placeholder="Search..."
-                app:mt_hint="Search..."
+                app:mt_placeholder="Search Label..."
+                app:mt_hint="Search Label..."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

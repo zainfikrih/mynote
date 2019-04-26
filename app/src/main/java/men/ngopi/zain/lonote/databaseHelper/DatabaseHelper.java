@@ -35,6 +35,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CREATE_TABLE_LABEL);
+
+        onUpgrade(sqLiteDatabase, 0, DATABASE_VERSION);
     }
 
     @Override
@@ -43,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 //        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NOTE);
 //        sqLiteDatabase.execSQL(CREATE_TABLE_NOTE);
 //        onCreate(sqLiteDatabase);
-        switch (i){
+        switch (i1){
             case 1:
                 //version 1
             case 2:

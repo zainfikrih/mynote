@@ -16,6 +16,9 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 import java.util.ArrayList;
 
@@ -41,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        AppCenter.start(getApplication(), "1ce38221-eab5-453e-93cc-6691f16ba59f", Analytics.class, Crashes.class);
 
         mainActivity = this;
 
@@ -101,6 +106,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(!materialSearchBar.getText().equals("")){
+            materialSearchBar.clearFocus();
+            materialSearchBar.setText("");
+        } else {
+            super.onBackPressed();
+            return;
+        }
+
     }
 
     public void getAllData(){
